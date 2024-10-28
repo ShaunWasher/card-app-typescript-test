@@ -49,9 +49,18 @@ export default function AllEntries() {
                   🖊
                 </button>
               </div>
-              <time className="text-right text-sm md:text-lg">
-                {new Date(entry.created_at.toString()).toLocaleDateString()}
-              </time>
+              <div>
+                created at:<br/>
+                <time className="text-right text-sm md:text-lg">
+                  {new Date(entry.created_at.toString()).toLocaleDateString()}
+                </time>
+              </div>
+              <div>
+              scheduled date:<br/>
+                <time className="text-right text-sm md:text-lg">
+                  {new Date(entry.scheduled_date.toString()).toLocaleDateString()}
+                </time>
+              </div>
             </section>
           </div>
         );
